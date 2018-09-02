@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no" />
+	<title>SGM调研平台</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/bootstrap-reset.css">
+	<!-- <link rel="stylesheet" href="fontawesome/css/font-awesome.css"> -->
+	<!-- <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/phonetype.js"></script>
+</head>
+<body>
+
+ 	<div id="top_header">
+
+ 		<div class="top-header-title" style="height: 88px;line-height: 88px;">
+ 	
+ 			<div class="container">
+ 				 <img src="img/top_icon.png" style="padding-left: 10px;"/>
+ 			     <span class="header_title" style="position:absolute;left:45%;">看板</span>
+ 			</div>
+ 			
+ 		</div>
+
+ 	      
+ 		<div class="top-header-select">
+ 			<div class="row container" style="text-align: center;">
+ 					<div class="col-xs-4" style="padding-left: 25px;padding-right: 5px;">
+ 						 <select 
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white">
+ 								<option title="<b>品牌：</b>雪佛兰" value="xuefulan">雪佛兰</option>
+ 								<option title="<b>品牌：</b>别克" value="bieke">别克</option>
+ 						</select> 
+ 					</div>
+ 					<div class="col-xs-4">
+ 						<select name="car_select"
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white" onchange="window.location=this.value;">   
+ 								<option title="<b>车型：</b>母品牌" value="index.html">母品牌</option>
+ 								<option title="<b>车型：</b>迈锐宝XL" value="brand.html" selected>迈锐宝XL</option>
+ 						</select>
+ 					</div>
+ 					<div class="col-xs-4" style="padding-left: 5px;padding-right: 25px;">
+ 						<select 
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white">   
+ 								<option title="<b>年份：</b>2015" value="year">2015</option>
+ 						</select>
+ 					</div>
+ 				</div>
+ 	    </div> 
+ 	 </div>  
+
+
+	<div class="container context">
+		
+		<div class="nav_div">
+			<div class="col-xs-3">
+				<a href="javascript:;"><div class="nav_box active">品牌描绘</div></a>
+			</div>
+			<div class="col-xs-3">
+				<a href="product.html"><div class="nav_box">产品描绘</div></a>
+			</div>
+			<div class="col-xs-3">
+				<a href="crowd.html"><div class="nav_box">人群描绘</div></a>
+			</div>
+			<div class="col-xs-3">
+				<a href="market.html"><div class="nav_box">营销描绘</div></a>
+			</div>
+		</div> 	
+
+		<div class="my_text_top">
+			<div class="title_all">
+					<span class="title_1">传播力与触动力指数</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="title_2">CEI & PII</span> 
+					<span class="title_3">数据源：BTS</span> 
+			</div>
+			
+
+			<div class="text_box" style="height: 560px;">
+				<div id="chuanbo_chart1"  style="width:100%;height: 560px;"></div>
+			</div>
+
+			<div class="text_box" style="height: 560px;margin-top: 30px;">
+				<div id="chuanbo_chart2"  style="width:100%;height: 560px;"></div>
+			</div> 
+		</div>	
+
+		<div class="my_text">
+			<span class="title_1">品牌漏斗</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span class="title_2">Brand funnel</span> 
+			<span class="title_3">数据源：BTS</span>
+
+			<div class="text_box" style="width: 100%;height: 900px;">
+				<div class="my_text_header">品牌漏斗 - 雪佛兰XL</div>
+				<div id="brand_chart" style="width:100%;height:820px;"></div>
+				
+			</div>		
+		</div>	
+
+		<div class="my_text">
+			<span class="title_1">感性形象</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span class="title_2">Perceptual  Image</span> 
+			<span class="title_3">数据源：BTS</span>
+
+			<div class="text_box" style="width: 100%;height: 1020px;">
+				
+				<div id="ganxing_chart" style="width:100%;height:980px;"></div>
+
+				<div style="float: right;display: inline;margin-top:-920px;margin-right: 20px;">
+					 <select 
+							class="bs-select form-control input-small1 btn-circle"
+							data-style="btn-circle btn-lg　btn-white" >
+							<option value="total">Total</option>
+							<option  value="Q1">Q1</option>
+							<option  value="Q2">Q2</option>
+							<option  value="Q3">Q3</option>
+							<option  value="firstHalf" selected>上半年</option>
+							<option  value="secondHalf">下半年</option>
+					</select> 
+				</div>	
+				
+
+			</div>		
+		</div>
+
+
+		<div class="my_text">
+			<span class="title_1">理性形象</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span class="title_2">Rational  Image</span> 
+			<span class="title_3">数据源：BTS</span>
+
+			<div class="text_box" style="width: 100%;height: 1020px;">
+				
+				<div id="lixing_chart" style="width:100%;height:980px;"></div>
+
+				<div style="float: right;display: inline;margin-top: -920px;margin-right: 20px;">
+					 <select 
+							class="bs-select form-control input-small1 btn-circle"
+							data-style="btn-circle btn-lg　btn-white" >
+							<option value="total">Total</option>
+							<option  value="Q1">Q1</option>
+							<option  value="Q2">Q2</option>
+							<option  value="Q3">Q3</option>
+							<option  value="firstHalf" selected>上半年</option>
+							<option  value="secondHalf">下半年</option>
+					</select> 
+				</div>	
+				
+
+			</div>		
+		</div>		
+
+
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/components-bootstrap-select.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<!-- <script src="js/echart.js"></script>  -->
+	<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.min.js"></script>
+
+	<script>
+		$(function() {
+
+			functionMap.chartchaunbo1(data['传播力与触动力']);
+			functionMap.chartchaunbo2();
+			functionMap.chartBrand();
+			functionMap.chartGanxing();
+			functionMap.chartLixing();
+
+			/*禁止屏幕双击上滑*/
+		//	FastClick.attach(document.body);
+		});
+		
+	</script>
+
+	<script>
+		var data = {
+			'传播力与触动力' : {
+				'传播力' : [ 50, 52, 66, 62, 85, 33, 31, 48, 58, 54, 62],
+				'触动力' : [ 8, 8, 10, 12, 26, 5, 3, 7, 8, 8,10],   
+			}
+		}
+	</script>
+
+	<script>
+			var functionMap = {};
+
+			var myChart_chuanbo1 = echarts.init(document.getElementById('chuanbo_chart1'));
+			var myChart_chuanbo2 = echarts.init(document.getElementById('chuanbo_chart2'));
+			var myChart_brand = echarts.init(document.getElementById('brand_chart'));
+			var mychart_ganxing = echarts.init(document.getElementById('ganxing_chart'));
+			var mychart_lixing = echarts.init(document.getElementById('lixing_chart'));
+
+			functionMap.chartchaunbo1 = function(data) {
+			var option0 = {
+				color : [ '#F0828A', '#42BAE4'],
+				tooltip : {
+						trigger : 'axis',
+						axisPointer: {
+				        	lineStyle: {
+				        		color: '#000',
+				        		type: 'dashed'    //设置线的样式用type
+
+				        	}
+				        },
+				        padding: 20,
+				        textStyle : {
+				        	color:'#fff',
+							fontSize:23,
+
+						}
+					},
+				grid : {
+					x : 40,   //左边距离
+					y : 158,    //上距离
+					x2 : 30,  //右边距离
+					y2 : 130   //底部高低
+				},
+				legend : {
+					show : true,
+					top : 54,
+					position : 'center',
+					itemHeight : 4,
+					itemWidth: 50,
+					itemGap:50,
+					data : [ {
+						name : "传播力指数",
+						icon : "rect",
+						textStyle : {
+							fontSize:20,
+						}
+					}, {
+						name : "触动力指数",
+						icon : "rect",
+						textStyle : {
+							fontSize:20,
+						}
+					} ]
+				},
+				xAxis : [ {
+					show : true,
+					axisTick: {show: false},
+					axisLine: {show: false},
+					type : "category",
+					data : [ "雪佛兰", "市场均值", "本田", "别克", "大众", "长安", "长城",
+							"福特", "现代", "日产", "丰田"],
+					axisLabel:{  
+		                interval:0,  
+		                rotate:40,   //倾斜度 -90 至 90 默认为0  
+		                margin:20,  
+		                textStyle:{  
+		                	fontSize:20,
+		                    fontWeight:"500",  
+		                    color:"#444"  
+		                }  
+	                }, 
+	                splitLine : {
+						show : false
+					},     
+				} ],
+				yAxis : [ {
+					show : true,    //此处设为true才会显示横的分割线
+					type : "value",
+					axisTick: {show: false},
+					axisLine: {show: false},
+					axisLabel:{
+						show:false
+					},
+					splitLine : { // 分隔线
+	                	show : true,
+						lineStyle : { 
+							color : [ '#F3F1F4' ]
+						}
+					},
+				} ],
+				series : [{
+					name : '传播力指数',
+					type : 'line',
+					smooth: true,  //折线变得光滑
+					symbolSize : 0.5,
+					itemStyle : {
+						normal : {
+							label : {
+								show : false,
+								formatter : '{c}',
+								position : 'top',
+								textStyle : {
+									fontSize:21,
+									color : '#000',
+									baseline : 'middle'
+								}
+							}
+						}
+					},
+					lineStyle : {
+						normal : {
+							width : 3
+						}
+					},
+					data : data['传播力']
+				},
+				{
+					name : '触动力指数',
+					type : 'line',
+					smooth: true,
+					symbolSize : 0.5,
+					itemStyle : {
+						normal : {
+							label : {
+								show : false,
+								formatter : '{c}',
+								position : 'top',
+								textStyle : {
+									fontSize:21,
+									color : '#000',
+									baseline : 'middle'
+								}
+							}
+						}
+					},
+					lineStyle : {
+						normal : {
+							width : 3
+						}
+					},
+					data :  data['触动力']
+				}]
+			};		
+				myChart_chuanbo1.setOption(option0);	
+			}	
+
+
+			//传播力柱状图
+			functionMap.chartchaunbo2 = function() {
+				var option = {
+				color :  [ '#F0828A', '#42BAE4'],
+				grid : {
+				
+					x : 40,   //左边距离
+					y : 158,    //上距离
+					x2 : 30,  //右边距离
+					y2 : 100   //底部高低
+				},
+				legend : {
+					top : 54,
+					itemWidth: 25,
+					itemHeight: 25,
+					itemGap:50,
+					icon: 'rect',
+					position : 'center',
+					data : [ {
+						name : "传播力指数",
+						textStyle : {
+							fontSize:20,
+						}
+					}, {
+						name : "触动力指数",
+						textStyle : {
+							fontSize:20,
+						}
+					} ]
+				},
+				xAxis : [ {
+					type : 'category',
+					data : [ "2014Q4", "2015Q1", "2015Q3", "2015Q4"],
+					boundaryGap : true,
+					axisTick: {show: false},
+					axisLine: {show: false},
+					axisLabel: {
+						show: true,
+						textStyle: {
+							fontSize: '20',
+							fontWeight:"500",  
+		                    color:"#444"  
+						}
+
+
+					},
+					
+				} ],
+				yAxis : [ {
+					axisTick: {show: false},
+					axisLine: {show: false},
+					axisLabel:{
+						show:false
+					},
+					type : 'value',
+					splitLine : { // 分隔线
+	                	show : true,
+	           			splitNumber:5,
+						lineStyle : { 
+							color : [ '#F3F1F4' ]
+						}
+					},
+				} ],
+				series : [
+					{
+						name : '传播力指数',
+						type : 'bar',
+						barGap : 0,
+						barCategoryGap : '30%',
+						itemStyle : {
+							normal : {
+								label : {
+									show : true,
+									position : 'top',
+									// offset: [0, 10],
+									//position: ['25%', '-13%'],
+									textStyle:{
+									  	 color: '#444444',
+									     fontSize:20
+									  }
+								}
+							}
+						},
+						data : ['60','57','61','62'] 
+					},{
+						name : '触动力指数',
+						type : 'bar',
+						barGap : 0,
+						barCategoryGap : '30%',
+						itemStyle : {
+							normal : {
+								label : {
+									show : true,
+									//position: ['25%', '-60%'],
+									position : 'top',
+									//offset: [0, 10],
+									textStyle:{
+									  	 color: '#444444',
+									     fontSize:20
+									  }
+								}
+							}
+						},
+						data : ['13','11','12','12']
+					} ]
+			};
+			myChart_chuanbo2.setOption(option);	
+			}
+
+
+
+			//品牌漏斗chart
+			functionMap.chartBrand = function(){
+				option = {
+					color:['#82DAFD','#6DC9F6','#4EB1EC','#379FE5'],
+				    tooltip : {
+				        trigger: 'axis',
+				        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+				          
+				            lineStyle: {
+					        		color: '#000',
+					        		type:'dashed'
+					        	}
+				        },
+				        padding: 20,
+				        textStyle : {
+				        	color:'#fff',
+							fontSize:20,
+						}
+				    },
+				    legend: {
+				    	/*top : 40,*/
+					    position : 'center',
+					   itemWidth: 25,
+						itemHeight: 25,
+						icon: 'rect',
+						itemGap:30,
+				       data : [ {
+							name : "2014Q1",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "2014Q2",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "2014Q3",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "2014Q4",
+							textStyle : {
+								fontSize:20,
+							}
+						}]
+				    },
+				    grid: {
+				     	x : 170,   //左边距离
+						y : 100,    //上距离
+						x2 : 30,  //右边距离
+						y2 : 100   //底部高低
+					 },
+				    xAxis : [
+				        {
+				            type : 'value',
+				            axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: false
+	            			},
+	            			splitLine : { // 分隔线
+			                	show : true,
+								lineStyle : { 
+									color : [ '#F3F1F4' ]
+								}
+							},
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'category',
+	            			axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: true,
+	            				textStyle: {
+	            					fontSize: '20',
+	            					fontWeight:"500",  
+	                                color:"#444" ,
+	                              /*  align: 'left',*/
+	            			   }
+	            			},
+				            data : ['净推荐度','购买考虑','购买意向','总体评价','触动力指数','熟悉度','提示后知名度','提示前知名度','传播力指数']
+				        }
+				    ],
+				    series : [
+				        {
+				            name:'2014Q1',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false,
+				                    position: 'inside'
+				                }
+				            },
+				            data:[-58, 8, 10, 8, 11, 59, 95, 32, 49]
+				        },
+				        {
+				            name:'2014Q2',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false
+				                }
+				            },
+				            data:[-56, 7, 8, 6, 8, 58, 93, 28, 46]
+				        },
+				        {
+				            name:'2014Q3',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false
+				                }
+				            },
+				            data:[-59, 6, 7, 5, 8, 61, 93, 32, 50]
+				        },
+				        {
+				            name:'2014Q4',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false,
+				                    position: 'left'
+				                }
+				            },
+				            data:[-60, 5, 7, 5, 8, 61, 94,32, 50]
+				        }
+				    ]
+				};
+				myChart_brand.setOption(option);	
+			}
+
+
+			//感性形象
+			functionMap.chartGanxing = function(){
+				option = {
+					color : [ '#54B9FB', '#FFC974', '#46DFE1', '#7E99F1', '#CF7EF1', '#F972AF', '#ACC2C2', '#74BF87', '#A5BC75' ],
+					grid: {
+				     	x : 170,   //左边距离
+						y : 270,    //上距离
+						x2 : 30,  //右边距离
+						y2 : 25   //底部高低
+					 },
+					 tooltip : {
+					        trigger: 'axis',
+					        axisPointer: {
+					        	lineStyle: {
+					        		color: '#000',
+					        		type:'dashed'
+					        	}
+					        },
+					        padding: 20,
+					        textStyle : {
+					        	color:'#fff',
+								fontSize:20,
+							}
+					 },
+					 legend:{
+					   orient : 'vertical',
+					   top: 32,
+					   left:'40',
+					   right: '300',
+					   itemWidth: 25,
+					   itemHeight: 25,
+					   itemGap: 13,
+					   icon : 'rect',
+					   data : [ {
+							name : "迈锐宝",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "索纳塔",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "君威",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						
+						{
+							name : "雪铁龙C5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						
+						
+						{name:""},
+						
+						{
+							name : "迈锐宝XL",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						
+						{
+							name : "凯美瑞",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "起亚K5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "2015下半年",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+
+						{name:""},
+						
+						{
+							name : "帕萨特",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "蒙迪欧",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "标致508",
+							textStyle : {
+								fontSize:20,
+							}
+						},]
+					 },
+					 xAxis : [
+				        {
+				            type : 'value',
+				            axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: false
+	            			},
+	            			splitLine : { // 分隔线
+			                	show : true,
+								lineStyle : { 
+									color : [ '#F3F1F4' ]
+								}
+							},
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'category',
+	            			axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: true,
+	            				textStyle: {
+	            					fontSize: '20',
+	            					fontWeight:"500",  
+	                                color:"#444" ,
+	            			   }
+	            			},
+	            			splitLine: {           
+					                lineStyle: {       
+					                    color: ['#F3F1F4']
+					                }
+					            },
+				            data : ['运动风格','豪华高档','年轻活力','开拓创新','彰显成就','激情进取','个性独特的','有驾驶乐趣','值得信赖','激发我的情感','我打造的品牌'],
+				        }
+				    ],
+				    series : [
+				    	 {
+				            name:'迈锐宝',
+				            type:'line',
+				            symbolSize : 0,
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[24, 37, 20, 21, 18, 21, 15, 13, 24,21,15]
+				        },
+				        {
+				            name:'迈锐宝XL',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[4, 7, 3, 1, 8, 2, 3, 2, 4,8,2]
+				        },
+				        {
+				            name:'帕萨特',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[14, 37, 10, 11,8, 21, 25, 23, 24,11,10]
+				        },
+				        {
+				            name:'索纳塔',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[14, 17, 30, 11, 48, 21, 35, 23, 14,18,20]
+				        },
+
+				        {
+				            name:'凯美瑞',
+				             type:'line',
+				             label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				             data:[12, 11, 14, 14, 10, 14, 15, 13, 14,11,15]
+				        },
+				        {
+				            name:'蒙迪欧',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[14, 27, 30, 11, 28, 21, 25, 23, 24,18,30]
+				        },
+				        {
+				            name:'君威',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				             data:[14, 27, 20, 25, 28, 20, 25, 23, 20,20,25]
+				        },
+				        {
+				            name:'起亚K5',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[11, 7, 9, 11, 8, 8, 9, 12, 9,9,10]
+				        },
+				        {
+				            name:'标致508',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				             data:[22, 27, 23, 21, 14, 21, 15, 16, 20,25,25]
+				        },
+				        {
+				            name:'雪铁龙C5',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[34, 37, 30, 31, 38, 31, 35, 23, 34,38,30]
+				        },
+				        {
+				            name:'2015下半年',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[44, 47, 40, 41, 48, 31, 45, 43, 34,41,45]
+				        }
+				    ]
+
+
+				};
+
+				mychart_ganxing.setOption(option);	
+			}
+
+
+
+			//理性形象
+			functionMap.chartLixing = function(){
+				option = {
+					color : [ '#54B9FB', '#FFC974', '#46DFE1', '#7E99F1', '#CF7EF1', '#F972AF', '#ACC2C2', '#74BF87', '#A5BC75' ],
+					grid: {
+				     	x : 170,   //左边距离
+						y : 270,    //上距离
+						x2 : 30,  //右边距离
+						y2 : 25    //底部高低
+					 },
+					 tooltip : {
+					        trigger: 'axis',
+					        axisPointer: {
+					        	lineStyle: {
+					        		color: '#000',
+					        		type:'dashed'
+					        	}
+					        },
+					        padding: 20,
+					        textStyle : {
+					        	color:'#fff',
+								fontSize:20,
+							}
+					 },
+					 legend:{
+					   orient : 'vertical',
+					   top: 32,
+					   left:'40',
+					   right: '300',
+					   itemWidth: 25,
+					   itemHeight: 25,
+					   itemGap: 13,
+					   icon : 'rect',
+					    data : [ {
+							name : "迈锐宝",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "索纳塔",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "君威",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						
+						{
+							name : "雪铁龙C5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						
+						
+						{name:""},
+						
+						{
+							name : "迈锐宝XL",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						
+						{
+							name : "凯美瑞",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "起亚K5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "2015下半年",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+
+						{name:""},
+						
+						{
+							name : "帕萨特",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "蒙迪欧",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "标致508",
+							textStyle : {
+								fontSize:20,
+							}
+						},]
+/*					   data : [ {
+							name : "迈锐宝",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "迈锐宝XL",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "帕萨特",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "索纳塔",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "凯美瑞",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "蒙迪欧",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "君威",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "起亚K5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "标致508",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "雪铁龙C5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "2015下半年",
+							textStyle : {
+								fontSize:20,
+							}
+						}]*/
+					 },
+					 xAxis : [
+				        {
+				            type : 'value',
+				            axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: false
+	            			},
+	            			splitLine : { // 分隔线
+			                	show : true,
+								lineStyle : { 
+									color : [ '#F3F1F4' ]
+								}
+							},
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'category',
+	            			axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: true,
+	            				textStyle: {
+	            					fontSize: '20',
+	            					fontWeight:"500",  
+	                                color:"#444" ,
+	            			   }
+	            			},
+	            			splitLine: {           // 分隔线
+					                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+					                    color: ['#F3F1F4']
+					                }
+					            },
+				            data : ['二手车残值高','健康环保的','燃油经济性好','乘坐空间宽敞','总体内饰好','技术先进','宁静舒适','安全','专业的','优质售后服务','驾驶性能出色','观设计吸引力','可靠耐用','品质出众','口碑良好','贴心的设计','物有所值'],
+				        }
+				    ],
+				    series : [
+
+				    	 {
+				            name:'迈锐宝',
+				            type:'line',
+				            symbolSize : 0.5,
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[24, 37, 20, 21, 18, 21, 15, 13, 24,21,15,24, 37, 20, 21, 18, 21]
+				        },
+				        {
+				            name:'迈锐宝XL',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[4, 7, 3, 1, 8, 2, 3, 2, 4,8,2, 2, 3, 2, 4,8,2]
+				        },
+				        {
+				            name:'帕萨特',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[14, 37, 10, 11,8, 21, 25, 23, 24,11,10, 21, 25, 23, 24,11,10]
+				        },
+				        {
+				            name:'索纳塔',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[14, 17, 30, 11, 48, 21, 35, 23, 14,18,20, 21, 35, 23, 14,18,20]
+				        },
+
+				        {
+				            name:'凯美瑞',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				             data:[12, 11, 14, 14, 10, 14, 15, 13, 14,11,15]
+				        },
+				        {
+				            name:'蒙迪欧',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[14, 27, 30, 11, 28, 21, 25, 23, 24,18,30, 21, 25, 23, 24,18,30]
+				        },
+				        {
+				            name:'君威',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				             data:[14, 27, 20, 25, 28, 20, 25, 23, 20,20,25, 20, 25, 23, 20,20,25]
+				        },
+				        {
+				            name:'起亚K5',
+				            type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				           lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+	            			 data:[11, 7, 9, 11, 8, 8, 9, 12, 9,9,10, 8, 9, 12, 9,9,10]
+				        },
+				        {
+				            name:'标致508',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				             lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+	            			data:[22, 27, 23, 21, 14, 21, 15, 16, 20,25,25, 21, 15, 16, 20,25,25]
+				        },
+				        {
+				            name:'雪铁龙C5',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+	            			data:[34, 37, 30, 31, 38, 31, 35, 23, 34,38,30, 31, 35, 23, 34,38,30]
+				        },
+				        {
+				            name:'2015下半年',
+				             type:'line',
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+	            			data:[44, 47, 40, 41, 48, 31, 45, 43, 34,41,45, 31, 45, 43, 34,41,45]
+				        }
+				    ]
+
+
+				}
+
+				mychart_lixing.setOption(option);	
+			}
+		
+	</script>
+</body>
+</html>

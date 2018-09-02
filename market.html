@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no" />
+	<title>SGM调研平台</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/bootstrap-reset.css">
+	<!-- <link rel="stylesheet" href="fontawesome/css/font-awesome.css"> -->
+	<!-- <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/phonetype.js"></script>
+</head>
+<body>
+
+ 	<div id="top_header">
+
+ 		<div class="top-header-title" style="height: 88px;line-height: 88px;">
+ 	
+ 			<div class="container">
+ 				 <img src="img/top_icon.png" style="padding-left: 10px;"/>
+ 			     <span class="header_title" style="position:absolute;left:45%;">看板</span>
+ 			</div>
+ 			
+ 		</div>
+
+ 	      
+ 		<div class="top-header-select">
+ 			<div class="row container" style="text-align: center;">
+ 					<div class="col-xs-4" style="padding-left: 25px;padding-right: 5px;">
+ 						 <select 
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white">
+ 								<option title="<b>品牌：</b>雪佛兰" value="xuefulan">雪佛兰</option>
+ 								<option title="<b>品牌：</b>别克" value="bieke">别克</option>
+ 						</select> 
+ 					</div>
+ 					<div class="col-xs-4">
+ 						<select name="car_select"
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white" onchange="window.location=this.value;">   
+ 								<option title="<b>车型：</b>母品牌" value="index.html">母品牌</option>
+ 								<option title="<b>车型：</b>迈锐宝XL" value="brand.html" selected>迈锐宝XL</option>
+ 						</select>
+ 					</div>
+ 					<div class="col-xs-4" style="padding-left: 5px;padding-right: 25px;">
+ 						<select 
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white">   
+ 								<option title="<b>年份：</b>2015" value="year">2015</option>
+ 						</select>
+ 					</div>
+ 				</div>
+ 	    </div> 
+ 	 </div>   
+
+
+	 <div class="container context">
+	 		<div class="nav_div">
+	 			<div class="col-xs-3">
+	 				<a href="brand.html"><div class="nav_box">品牌描绘</div></a>
+	 			</div>
+	 			<div class="col-xs-3">
+	 				<a href="product.html"><div class="nav_box">产品描绘</div></a>
+	 			</div>
+	 			<div class="col-xs-3">
+	 				<a href="crowd.html"><div class="nav_box">人群描绘</div></a>
+	 			</div>
+	 			<div class="col-xs-3">
+	 				<a href=""><div class="nav_box active">营销描绘</div></a>
+	 			</div>
+	 		</div> 	
+
+	 		<div class="my_text_top">
+	 			<span class="title_1">宣传活动2016年2月-2016年5月</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 			<span class="title_3">数据源：AD Tracking</span>
+
+	 			<div class="text_box" style="width: 100%;height: 2650px;">
+					<div class="my_text_header1">营销效果到达</div>
+	 				<div id="whole_ad"  style="width:100%;height: 500px;"></div>
+					<div id="TV_ad"  style="width:100%;height: 500px;"></div>
+					<div id="PM_ad"  style="width:100%;height: 500px;"></div>
+					<div id="WL_ad"  style="width:100%;height: 500px;"></div>
+					<div id="DT_ad"  style="width:100%;height: 500px;"></div>
+	 			</div>
+	 		</div>	
+
+
+	 		<div class="my_text">
+	 			<div class="text_box" style="width: 100%;height: 1880px;">
+					
+					<div class="my_text_header1">广告唤起效果</div>
+
+	 				<div id="XW_chart"  style="width:100%;height: 650px;"></div>
+					<div id="XX_chart"  style="width:100%;height: 1100px;"></div>
+	 			</div>
+	 		</div>	
+
+
+	 		<div class="my_text">
+	 			<div class="text_box" style="width: 100%;height: 1340px;">
+					
+					<div class="my_text_header1">广告喜好程度</div>
+
+	 				<div id="like_chart1"  style="width:100%;height: 600px;"></div>
+					<div id="like_chart2"  style="width:100%;height: 600px;"></div>
+	 			</div>
+	 		</div>	
+
+
+	 		<div class="my_text">
+	 			<span class="title_1">购车各个环节转化率</span>
+	 			<div class="text_box" style="width: 100%;height: 760px;">
+			
+						<div class="my_text_header2">雪佛兰迈锐宝XL-2016年</div>
+
+						<div class="chart-panel funnel">
+							<div class="funnel_legend" style="position: absolute; top: 0">
+								<span
+									style="margin-top: 10px;">进店前了解</span>
+								<span
+									style="margin-top: 45px;">进店后详细了解对比</span>
+								<span
+									style="margin-top: 45px;">试驾后再对比</span>
+								<span
+									style="margin-top: 45px;">最终PX阶段后放弃</span>
+							</div>
+							<div class="funnel_data">
+								<h5 style="margin-left: 380px;padding-top:8px;">100</h5>
+								<h5 style="margin-left: 390px;margin-top: 43px;">89</h5>
+								<h5 style="margin-left: 390px;margin-top: 40px;">48</h5>
+								<h5 style="margin-left: 390px;margin-top: 35px;">18</h5>
+							</div>
+							<div class="funnel_mark_point">
+								<div class="point" style="left: 560px;top:50px;">
+									<span>75%</span>
+								</div>
+								<div class="point" style="left: 535px;top:130px;">
+									<span>63%</span>
+								</div>
+								<div class="point" style="left: 490px;top:208px;">
+									<span>36%</span>
+								</div>
+							</div>
+						</div>
+						
+
+						<div class="zhuan_word">
+						    <div class="zhuan">战败用户在各个阶段的转化率</div>
+							<ul class="mktUL">
+								<li>1.&nbsp;&nbsp; 25%的用户在进店前放弃</li>
+								<li>2.&nbsp;&nbsp; 28%的用户在进店详细对比后放弃</li>
+								<li>3.&nbsp;&nbsp; 30%的用户在试驾后放弃</li>
+								<li>4.&nbsp;&nbsp; 17%的用户在最终PX阶段放弃</li>
+							</ul>
+						</div>
+	 			</div>
+	 		</div>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/components-bootstrap-select.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<!-- <script src="js/echart.js"></script>  -->
+	<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.min.js"></script>
+
+	<script>
+		$(function() {
+			/*禁止屏幕双击上滑*/
+		//	FastClick.attach(document.body);
+
+			rendchartAD('whole_ad','广告整体');
+			rendchartAD('TV_ad','电视广告');
+			rendchartAD('PM_ad','平面广告');
+			rendchartAD('WL_ad','网络视频');
+			rendchartAD('DT_ad','电台广播');
+
+			rendchartResult('XW_chart','广告行为唤起效果');
+			rendchartResult1('XX_chart','形象感知提升效果');
+
+			rendchartLike('like_chart1','广告喜好程度');
+			rendchartLike1('like_chart2','看广告后印象');
+
+		});
+	</script>
+
+	<script>
+		function rendchartAD(chartId, titleName) {
+			var myChart = echarts.init(document.getElementById(chartId));
+			var option = {
+			color :  [ '#71c8f2', '#4ca7e4'],
+			title: {
+		       text: titleName,
+		       x:'center',
+		       y:'top',
+		       top : 30,
+		       textStyle: {
+                  fontSize: 30,
+                  fontWeight: '500',
+                  color: '#444'          // 主标题文字颜色
+              }
+			},
+			grid : {
+				x : 40,   //左边距离
+				y : 180,    //上距离
+				x2 : 30,  //右边距离
+				y2 : 50   //底部高低
+			},
+			legend : {
+				top : 100,
+				position : 'center',
+				icon: 'rect',
+				itemWidth: 25,
+				itemHeight: 25,
+				itemGap:50,
+				data : [ {
+					name : "雪佛兰迈锐宝XL",
+					textStyle : {
+						fontSize:22,
+					}
+				}, {
+					name : "行业基准",
+					textStyle : {
+						fontSize:22,
+					}
+				} ]
+			},
+			xAxis : [ {
+				type : 'category',
+				data : [ "到达率", "可见度", "品牌链接度"],
+				boundaryGap : true,
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel: {
+					show: true,
+					textStyle: {
+						fontSize: '20',
+						fontWeight:"500",  
+	                    color:"#444"  
+					}
+
+
+				},
+				
+			} ],
+			yAxis : [ {
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel:{
+					show:false
+				},
+				type : 'value',
+				splitLine : { // 分隔线
+                	show : true,
+					lineStyle : { 
+						color : [ '#F3F1F4' ]
+					}
+				},
+			} ],
+			series : [
+				{
+					name : '雪佛兰迈锐宝XL',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					/*barCategoryGap : '30%',*/
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['51','71','72'] 
+				},{
+					name : '行业基准',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+								// offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['37','58','64']
+				} ]
+			};
+			myChart.setOption(option);	
+		}
+
+
+
+		function rendchartResult(chartId, titleName) {
+			var myChart = echarts.init(document.getElementById(chartId));
+			var option = {
+			color :  [ '#71c8f2', '#4ca7e4'],
+			title: {
+		       text: titleName,
+		       x:'center',
+		       y:'top',
+		       textStyle: {
+                  fontSize: 30,
+                  fontWeight: '500',
+                  color: '#444'          // 主标题文字颜色
+              }
+			},
+			grid : {
+				x : 40,   //左边距离
+				y : 180,    //上距离
+				x2 : 30,  //右边距离
+				y2 : 90  //底部高低
+			},
+			legend : {
+				top : 80,
+				position : 'center',
+				icon: 'rect',
+				itemWidth: 25,
+				itemHeight: 25,
+				itemGap: 60,
+				data : [ {
+					name : "广告达到",
+					textStyle : {
+						fontSize:22,
+					}
+				}, {
+					name : "广告未到达",
+					textStyle : {
+						fontSize:22,
+					}
+				} ]
+			},
+			xAxis : [ {
+				type : 'category',
+				data : [ "推荐给亲\n戚或朋友", "预约试\n乘试驾", "去该车型的\n4S店看实车",'主动上网搜索\n它相关的信息'],
+				boundaryGap : true,
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel: {
+					show: true,
+					interval: 0,
+					//rotate:50,        //倾斜度 -90 至 90 默认为0  
+				    margin:15,
+					textStyle: {
+						fontSize: '20',
+						fontWeight:"500",  
+	                    color:"#444"  
+					}
+
+
+				},
+				
+			} ],
+			yAxis : [ {
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel:{
+					show:false
+				},
+				type : 'value',
+				splitLine : { // 分隔线
+                	show : true,
+					lineStyle : { 
+						color : [ '#F3F1F4' ]
+					}
+				},
+			} ],
+			series : [
+				{
+					name : '广告达到',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['51','71','71','72'] 
+				},{
+					name : '广告未到达',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					/*barCategoryGap : '30%',*/
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['37','58','58','64']
+				} ]
+			};
+			myChart.setOption(option);	
+		}
+
+
+
+		function rendchartResult1(chartId, titleName){
+			var myChart = echarts.init(document.getElementById(chartId));
+
+			var  option = {
+					color :  [ '#71c8f2', '#4ca7e4'],
+					title: {
+				       text: titleName,
+				       x:'center',
+				       y:'top',
+				       top : 75,
+				       textStyle: {
+		                  fontSize: 30,
+		                  fontWeight: '500',
+		                  color: '#444'          // 主标题文字颜色
+		              }
+					},
+					grid: {
+				     	x : 150,   //左边距离
+     					y : 220,    //上距离
+     					x2 : 80,  //右边距离
+     					y2 : 30   //底部高低
+					 },
+					 tooltip : {
+					        trigger: 'axis',
+					        axisPointer: {
+					        	lineStyle: {
+					        		color: '#000',
+					        		type:'dashed'
+					        	}
+					        },
+					        padding: 20,
+					        textStyle : {
+					        	color:'#fff',
+								fontSize:20,
+							}
+					 },
+					 legend:{
+					   icon: 'rect',
+					    itemWidth: 25,
+					    itemHeight: 25,
+						itemGap: 60,
+					   top: '150',
+					   data : [ {
+							name : "广告达到",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "广告未到达",
+							textStyle : {
+								fontSize:20,
+							}
+						}]
+					 },
+					 xAxis : [
+				        {
+				            type : 'value',
+				            axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: false
+	            			},
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'category',
+	            			axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: true,
+	            				textStyle: {
+	            					fontSize: '22',
+	            					fontWeight:"500",  
+	                                color:"#444" ,
+	            			   }
+	            			},
+	            			splitLine: {           // 分隔线
+					                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+					                    color: ['#F3F1F4']
+					                }
+					            },
+				            data : ['节能环保','品牌档次高','锐意进取','操控灵活','科技领先','动力强劲','高效便捷','乘坐舒适','高档精致','配置舒服','安全性强','时尚动感'],
+				        }
+				    ],
+				    series : [
+				    	 {
+				            name:'广告达到',
+				            type:'line',
+				            symbolSize : 12,
+				            symbol : 'circle',  
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+	                        lineStyle : {
+	            				normal : {
+	            					width : 4
+	            				}
+	            			},
+				            data:[24, 37, 20, 21, 18, 21, 15, 13, 24,21,15,14]
+				        },
+				        {
+				            name:'广告未到达',
+				            type:'line',
+				            symbolSize : 12,
+				            symbol : 'circle',  
+				            label: {
+				                normal: {
+				                    show: false,
+				                }
+				            },
+				            lineStyle : {
+								normal : {
+									width : 4
+								}
+							},
+				            data:[4, 7, 3, 1, 8, 2, 3, 2, 4,8,2,9]
+				        }
+				    ]
+
+				};
+			myChart.setOption(option);	
+		}
+
+
+		function rendchartLike(chartId, titleName){
+			var myChart = echarts.init(document.getElementById(chartId));
+			var option = {
+			color :  [ '#71c8f2', '#4ca7e4'],
+			title: {
+		       text: titleName,
+		       x:'center',
+		       y:'top',
+		       textStyle: {
+                  fontSize: 30,
+                  fontWeight: '500',
+                  color: '#444'          // 主标题文字颜色
+              }
+			},
+			grid : {
+				x : 40,   //左边距离
+				y : 180,    //上距离
+				x2 : 30,  //右边距离
+				y2 : 50   //底部高低
+			},
+			legend : {
+				top : 80,
+				icon: 'rect',
+				itemWidth: 25,
+				itemHeight: 25,
+				itemGap: 35,
+				position : 'center',
+				data : [ {
+					name : "雪佛兰迈锐宝XL",
+					textStyle : {
+						fontSize:22,
+					}
+				}, {
+					name : "行业基准",
+					textStyle : {
+						fontSize:22,
+					}
+				} ]
+			},
+			xAxis : [ {
+				type : 'category',
+				data : [ "视屏广告", "平面广告"],
+				boundaryGap : true,
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel: {
+					show: true,
+				    margin:15,
+					textStyle: {
+						fontSize: '20',
+						fontWeight:"500",  
+	                    color:"#444"  
+					}
+
+
+				},
+				
+			} ],
+			yAxis : [ {
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel:{
+					show:false
+				},
+				type : 'value',
+				splitLine : { // 分隔线
+                	show : true,
+					lineStyle : { 
+						color : [ '#F3F1F4' ]
+					}
+				},
+			} ],
+			series : [
+				{
+					name : '雪佛兰迈锐宝XL',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					/*barCategoryGap : '30%',*/
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['51','71'] 
+				},{
+					name : '行业基准',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					/*barCategoryGap : '30%',*/
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['37','58']
+				} ]
+			};
+			myChart.setOption(option);	
+
+		}
+
+
+
+		function rendchartLike1(chartId, titleName){
+			var myChart = echarts.init(document.getElementById(chartId));
+			var option = {
+			color :  [ '#8bdcfb', '#77ccf4', '#5ab3e9', '#45a2e3', '#358fd0'],
+			title: {
+		       text: titleName,
+		       x:'center',
+		       y:'top',
+		       top : '40',
+		       textStyle: {
+                  fontSize: 30,
+                  fontWeight: '500',
+                  color: '#444'          // 主标题文字颜色
+              }
+			},
+			grid : {
+				x : 40,   //左边距离
+				y : 250,    //上距离
+				x2 : 30,  //右边距离
+				y2 : 50   //底部高低
+			},
+			legend : {
+				top : 130,
+				position : 'center',
+				icon: 'rect',
+				itemWidth: 25,
+				itemHeight: 25,
+				itemGap: 25,
+				data : [ {
+					name : "非常好",
+					textStyle : {
+						fontSize:22,
+					}
+				}, {
+					name : "比较好",
+					textStyle : {
+						fontSize:22,
+					}
+				} ,
+				{
+					name : "一般",
+					textStyle : {
+						fontSize:22,
+					}
+				}, {
+					name : "比较差",
+					textStyle : {
+						fontSize:22,
+					}
+				},
+				{
+					name : "非常差",
+					textStyle : {
+						fontSize:22,
+					}
+				} ]
+			},
+			xAxis : [ {
+				type : 'category',
+				data : [ "视屏广告", "平面广告"],
+				boundaryGap : true,
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel: {
+					show: true,
+				    margin:15,
+					textStyle: {
+						fontSize: '20',
+						fontWeight:"500",  
+	                    color:"#444"  
+					}
+
+
+				},
+				
+			} ],
+			yAxis : [ {
+				axisTick: {show: false},
+				axisLine: {show: false},
+				axisLabel:{
+					show:false
+				},
+				type : 'value',
+				splitLine : { // 分隔线
+                	show : true,
+					lineStyle : { 
+						color : [ '#F3F1F4' ]
+					}
+				},
+			} ],
+			series : [
+				{
+					name : '非常好',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								}
+							}
+						}
+					},
+					data : ['50','48','3'] 
+				},{
+					name : '比较好',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['48','45','3']
+				},
+				{
+					name : '一般',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : ['2','5','3']
+				},
+				{
+					name : '比较差',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+								// offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : []
+				},
+				{
+					name : '非常差',
+					type : 'bar',
+					barGap : 0,
+					barWidth: '45',
+					itemStyle : {
+						normal : {
+							label : {
+								show : true,
+								position : 'top',
+							//	 offset: [0, 10],
+								textStyle:{
+								  	 color: '#444444',
+								     fontSize:20
+								  }
+							}
+						}
+					},
+					data : []
+				} ]
+			};
+			myChart.setOption(option);	
+
+		}
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+body {
+    overflow-x:hidden;
+   /*  font-family:  "PingFang"; */
+}
+html{
+	overflow-x: hidden;
+	/* font-family:  "PingFang"; */
+	font-family:  "Microsoft YaHei";
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd, ol {
+  margin: 0;
+}
+input, ul, ol {
+  padding: 0;
+}
+ul, ol {
+  list-style: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+   text-decoration: none;
+}
+:focus {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+@font-face{
+	font-family: 'PingFang';
+	/* src: url("../fonts/PingFang Regular.ttf"); */
+}
+
+
+.bootstrap-select>.dropdown-toggle{
+	padding-right:10px !important;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret{
+	top: 46% !important;
+}
+.btn-lg{
+	padding-left:  10px !important;
+}
+
+
+
+
+#top_header{
+	width: 100%;
+	/* position: fixed;
+	z-index: 10;  */
+}
+.top-header-title{
+	background-color: #2ab9e6;
+	padding-bottom: 0px;
+	box-shadow:0 4px 4px #ECECEC; 
+}
+.top-header-select{
+	border-bottom: 1px solid #CFDBE3;
+	height:100px;
+	line-height:100px;
+}
+
+.header{
+	padding-top: 0px;
+	overflow-x: hidden;
+	text-align: center;
+}
+.header_title{
+	 font-size: 34px; 
+	 letter-spacing: 2px;
+	 color: #fff;
+}
+.panel {
+	border-radius :0px !important;
+}
+.panel-heading{
+	font-weight: 500 !important;
+}
+ .bootstrap-select.btn-group .dropdown-toggle .caret{
+	color: #474b5b;
+} 
+.bootstrap-select.btn-group .dropdown-menu li.selected a{
+	background: #42bae4 !important;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li.hover a{
+	background: #fff !important;
+}
+
+.form-control{
+	color: #000 !important;
+}
+.dropdown-menu>li>a{
+	padding: 12px 20px !important;
+}
+.btn-lg .caret{
+	border-width: 10px 10px 0 !important;
+}
+.btn-lg b{
+	font-weight: 500 !important;
+	color: #474B5C;
+}
+.dropdown-menu{
+	border-radius: 0px !important;
+	font-size: 24px !important;
+	margin: 0px 0 0 !important;
+    top: 70px !important;
+}
+.dropdown-menu{
+	border-radius: 6px !important;
+}
+.bootstrap-select.btn-group .dropdown-menu li.selected a {
+    background: #E1E5EC ;
+    color: #fff ;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+	background: #fff;
+	color: #000 ;
+}
+
+.dropdown-menu{
+	padding: 0px !important;
+	/* box-shadow: 5px 5px rgba(102, 102, 102, .1); */
+}
+.input-small {
+    width: 220px !important;
+    height: 68px !important;
+}
+.input-small1 {
+    width: 210px !important;
+    height: 68px !important;
+}
+.bootstrap-select b{
+	font-size: 24px !important;
+}
+.dropdown-toggle{
+	font-size: 24px !important;
+	padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+/* 4个选择框 */
+.nav_div{
+	margin-top: 40px;
+	padding-bottom: 60px;
+}
+.nav_div .col-xs-3{
+   text-align: center;
+}
+.nav_box{
+	color: #41BCE3;
+   height: 60px;
+   line-height: 60px;
+   border-radius: 5px;
+   border: 1px solid  #41BCE3;
+}
+.nav_div .col-xs-3 .active {
+	color: #fff;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 5px;
+	border: 1px solid  #41BCE3;
+	background:  #41BCE3;
+}
+
+.nav_div .col-xs-3 a {
+	
+	font-size: 25px;
+}
+/* 内容 */
+.context{
+	background:#F6F7FB;
+}
+.text_box{
+	width: 100%;
+	height: 500px;
+	border:1px solid #CFDBE1;
+	border-top: 3px solid #CFDBE1;
+	background: #fff;
+	margin-top: 20px;
+	border-radius: 4px;
+	box-shadow: 0 3px 3px -3px #CFDBE1 inset;
+}
+.my_text{
+	margin-top: 34px;
+	margin-bottom: 19px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.my_text_top{
+	margin-top: 50px;
+	margin-bottom: 19px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.title_1{
+	font-size: 30px;
+	color: #444;
+}
+.title_2{
+	font-size: 23px;
+	color: #B2B3B5;
+}
+.title_3{
+	font-size: 23px;
+	color: #B2B3B5;
+	height: 26px;
+	float: right; 
+	padding-top: 8px;
+}
+
+.my_text_header {
+	margin-top: 30px;
+	font-size: 28px;
+	color:  #444;
+	margin-bottom:49px;
+	text-align: center;
+}
+.my_text_header1{
+	margin-top: 25px;
+	font-size: 38px;
+	color: #000;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.my_text_header2{
+	margin-top: 25px;
+	font-size: 38px;
+	color: #444;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.zhuan{
+	font-size: 30px;
+	color: #67a2e9;
+	margin-bottom: 15px;
+	margin-left: 45px;
+}
+.mktUL li{
+	font-size:23px;
+	color: #474747;
+	margin-bottom: 10px;
+	margin-left: 45px;
+}
+.zhuan_word{
+	margin-top: 80px;
+}
+.funnel{
+	position: relative;
+	height: 273px;
+	margin-top: 55px;
+    background: url(../img/funnel.png) no-repeat 85% 120%;
+}
+.funnel_legend span{
+	display: block;
+	font-size: 23px;
+	margin-left: 40px;
+}
+
+.funnel_data h5{
+	font-size: 33px;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: 2px 
+}
+.funnel_mark_point .point{
+	position: absolute;
+}
+.funnel_mark_point .point span{
+	font-size: 26px;
+	color: #607a96;
+}
+
+
+.img_word{
+	position: absolute;
+	color: #87a4cf;
+	font-size: 26px;
+	font-weight: 600;
+	font-family: 'Microsoft YaHei'
+}
+
+.word1 {
+	top: 30px;
+	left: 20px;
+}
+.word2{
+	top: 190px;
+	left: 20px;
+}
+.word3{
+	top: 420px;
+	left: 20px;
+}
+.word4{
+	top: 4px;
+    left: 500px;
+}
+.word5{
+	top: 190px;
+    left: 535px;
+}
+.word6{
+	top: 418px;
+    left: 430px;
+}
+.tip{
+	position:absolute;
+
+}
+.tipTxt{
+	position: absolute;
+	font-size: 21px;
+	color: #fff;
+	width: 338px;
+}
+#tooltip1{
+	top: 60px;
+    left: -25px;
+}
+.tipTxt1 {
+	top: 60px;
+    left: 35px;
+}
+
+#tooltip2{
+	top: 260px;
+    left: -25px;
+}
+.tipTxt2 {
+	top: 70px;
+    left: 35px;
+}
+.tipTxt3 {
+	top: 70px;
+    left: 35px;
+}
+.tipTxt4 {
+	top: 80px;
+    left: 35px;
+}
+.tipTxt5 {
+	top: 80px;
+    left: 35px;
+}
+.tipTxt6 {
+	top: 80px;
+    left: 35px;
+}

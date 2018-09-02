@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no" />
+	<title>SGM调研平台</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/bootstrap-reset.css">
+	<!-- <link rel="stylesheet" href="fontawesome/css/font-awesome.css"> -->
+	<!-- <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/phonetype.js"></script>
+</head>
+<body>
+
+  	<div id="top_header">
+
+ 		<div class="top-header-title" style="height: 88px;line-height: 88px;">
+ 	
+ 			<div class="container">
+ 				 <img src="img/top_icon.png" style="padding-left: 10px;"/>
+ 			     <span class="header_title" style="position:absolute;left:45%;">看板</span>
+ 			</div>
+ 			
+ 		</div>
+
+ 	      
+ 		<div class="top-header-select">
+ 			<div class="row container" style="text-align: center;">
+ 					<div class="col-xs-4" style="padding-left: 25px;padding-right: 5px;">
+ 						 <select 
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white">
+ 								<option title="<b>品牌：</b>雪佛兰" value="xuefulan">雪佛兰</option>
+ 								<option title="<b>品牌：</b>别克" value="bieke">别克</option>
+ 						</select> 
+ 					</div>
+ 					<div class="col-xs-4">
+ 						<select name="car_select"
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white" onchange="window.location=this.value;">   
+ 								<option title="<b>车型：</b>母品牌" value="index.html">母品牌</option>
+ 								<option title="<b>车型：</b>迈锐宝XL" value="brand.html" selected>迈锐宝XL</option>
+ 						</select>
+ 					</div>
+ 					<div class="col-xs-4" style="padding-left: 5px;padding-right: 25px;">
+ 						<select 
+ 								class="bs-select form-control input-small btn-circle"
+ 								data-style="btn-circle btn-lg　btn-white">   
+ 								<option title="<b>年份：</b>2015" value="year">2015</option>
+ 						</select>
+ 					</div>
+ 				</div>
+ 	    </div> 
+ 	 </div>  
+
+
+	 <div class="container context">
+			<div class="nav_div">
+				<div class="col-xs-3">
+					<a href="brand.html"><div class="nav_box">品牌描绘</div></a>
+				</div>
+				<div class="col-xs-3">
+					<a href=""><div class="nav_box  active">产品描绘</div></a>
+				</div>
+				<div class="col-xs-3">
+					<a href="crowd.html"><div class="nav_box">人群描绘</div></a>
+				</div>
+				<div class="col-xs-3">
+					<a href="market.html"><div class="nav_box">营销描绘</div></a>
+				</div>
+			</div> 	
+
+
+			<div class="my_text_top">
+				<span class="title_1">产品评价</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 500px;">
+					<div id="eval_chart"  style="width:100%;height: 480px;"></div>
+				</div>
+			</div>	
+
+
+			<div class="my_text">
+				<span class="title_1">新车总体满意度</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 950px;">
+					<div id="newcar_chart"  style="width:100%;height: 930px;"></div>
+				</div>
+			</div>	
+
+
+			<div class="my_text">
+				<span class="title_1">Clinic 外观内饰空间综合评价</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 1900px;">
+					
+					<div id="composite_chart1"  style="width:100%;height: 460px;margin-top:30px;"></div>
+					<div id="composite_chart2"  style="width:100%;height: 460px;"></div>
+					<div id="composite_chart3"  style="width:100%;height: 460px;"></div>
+					<div id="composite_chart4"  style="width:100%;height: 460px;"></div>
+				</div>
+			</div>
+
+			<div class="my_text">
+				<span class="title_1">购买排序</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 810px;">
+					<div id="buy_chart"  style="width:100%;height: 780px;"></div>
+				</div>
+			</div>	
+
+
+			<div class="my_text">
+				<span class="title_1">购买原因TOP5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Rejection</span>
+
+				<div class="text_box" style="width: 100%;height: 550px;">
+					<div id="buyreason_chart1"  style="width:100%;height: 530px;"></div>
+				</div>
+			</div>
+
+			<div class="my_text">
+				<span class="title_1">购买原因TOP5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：NCBS</span>
+
+				<div class="text_box" style="width: 100%;height: 550px;">
+					<div id="buyreason_chart2"  style="width:100%;height: 530px;"></div>
+				</div>
+			</div>
+
+
+			<div class="my_text">
+				<span class="title_1">拒绝原因TOP5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Rejection</span>
+
+				<div class="text_box" style="width: 100%;height: 550px;">
+					<div id="rr_chart1"  style="width:100%;height: 500px;"></div>
+				</div>
+			</div>
+
+			<div class="my_text">
+				<span class="title_1">拒绝原因TOP5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：NCBS</span>
+
+				<div class="text_box" style="width: 100%;height: 550px;">
+					<div id="rr_chart2"  style="width:100%;height: 500px;"></div>
+				</div>
+			</div>
+
+
+			<div class="my_text">
+				<span class="title_1">问题大类</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 810px;">
+					<div id="issue_chart"  style="width:100%;height: 780px;"></div>
+				</div>
+			</div>	
+
+			<div class="my_text">
+				<span class="title_1">外观评价</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 780px;">
+					<div id="WG_chart"  style="width:100%;height: 750px;"></div>
+				</div>
+			</div>	
+
+			<div class="my_text">
+				<span class="title_1">内饰评价</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 780px;">
+					<div id="NS_chart"  style="width:100%;height: 750px;"></div>
+				</div>
+			</div>	
+
+			<div class="my_text">
+				<span class="title_1">内部空间</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="title_3">数据源：Clinic</span>
+
+				<div class="text_box" style="width: 100%;height: 780px;">
+					<div id="NB_chart"  style="width:100%;height: 750px;"></div>
+				</div>
+			</div>	
+
+	 </div>
+	
+
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/components-bootstrap-select.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<!-- <script src="js/echart.js"></script>  -->
+	<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.min.js"></script>
+
+	<script>
+		$(function() {
+			/*禁止屏幕双击上滑*/
+		//	FastClick.attach(document.body);
+
+			rendchart1('eval_chart', [17, 21, 26, 33, 33,49], ['日产天籁','别克君威','现代索纳塔','雪佛兰迈锐宝XL','本田雅阁','福特蒙迪欧'], '#41BCE3');
+
+			rendchart1('newcar_chart', [53, 56, 58, 58, 59,62,62,69,66,69,69,74,78], ['标致508','起亚K5','别克君威','本田雅阁','雪佛兰迈锐宝XL','雪佛兰迈锐宝','市场均值','现代索纳塔','日产天籁','福特蒙迪欧','丰田凯美瑞','大众迈腾','大众帕萨特'], '#4ca7e4');
+
+		/*	rendchart2('composite_chart1','外观评价',['雪佛兰迈锐宝XL','福特蒙迪欧','本田雅阁','现代索纳塔','别克君威','日产天籁'],[42,36,36,44,41,46]);
+
+			rendchart2('composite_chart2','内饰评价',['雪佛兰迈锐宝XL','福特蒙迪欧','本田雅阁','现代索纳塔','别克君威','日产天籁'],[42,36,36,44,41,46]);
+
+			rendchart2('composite_chart3','空间评价',['雪佛兰迈锐宝XL','福特蒙迪欧','本田雅阁','现代索纳塔','别克君威','日产天籁'],[42,36,36,44,41,46]);
+
+			rendchart2('composite_chart4','综合评价',['雪佛兰迈锐宝XL','福特蒙迪欧','本田雅阁','现代索纳塔','别克君威','日产天籁'],[42,36,36,44,41,46]);
+*/
+
+			rendchart2('composite_chart1','外观评价',['雪佛兰\n迈锐宝XL','福特\n蒙迪欧','本田\n雅阁','现代\n索纳塔','别克\n君威','日产\n天籁'],[42,36,36,44,41,46]);
+
+			rendchart2('composite_chart2','内饰评价',['雪佛兰\n迈锐宝XL','福特\n蒙迪欧','本田\n雅阁','现代\n索纳塔','别克\n君威','日产\n天籁'],[42,36,36,44,41,46]);
+
+			rendchart2('composite_chart3','空间评价',['雪佛兰\n迈锐宝XL','福特\n蒙迪欧','本田\n雅阁','现代\n索纳塔','别克\n君威','日产\n天籁'],[42,36,36,44,41,46]);
+
+			rendchart2('composite_chart4','综合评价',['雪佛兰\n迈锐宝XL','福特\n蒙迪欧','本田\n雅阁','现代\n索纳塔','别克\n君威','日产\n天籁'],[42,36,36,44,41,46]);
+
+
+			functionMap.chartBuy();
+
+			rendchart3('buyreason_chart1', '',['外观造\n型设计','后排空间','油耗','耐久可靠','配置丰\n富齐全'],[64,48,22,22,20]);
+			
+			rendchart3('buyreason_chart2', '',['外观造\n型设计','后排空间','油耗','耐久可靠','配置丰富齐全'],[64,48,22,22,20]);
+
+			rendchart3('rr_chart1', '',['外观造\n型设计','后排空间','油耗','耐久可靠','配置丰\n富齐全'],[64,48,22,22,20]);
+			
+			rendchart3('rr_chart2', '',['外观造\n型设计','后排空间','油耗','耐久可靠','配置丰\n富齐全'],[64,48,22,22,20]);
+
+			rendchart1('issue_chart', [11.2, 7.5, 3.8, 57, 10, 16.2,12.5,25,143.8], 
+				['驾驶体验','空调通风','座椅','发动机/变速箱','车内部','音响娱乐系统','控制系统','车身外部','本品全部问题'], '#42bae4');
+
+			rendEvalChart('WG_chart', '迈锐宝XL - BPD研究数据');
+			rendEvalChart('NS_chart', '迈锐宝XL - BPD研究数据');
+			rendEvalChart('NB_chart', '迈锐宝XL - BPD研究数据');
+
+			
+			
+		});
+		
+	</script>
+
+	<script>
+			var functionMap = {};
+			var myChart_buy = echarts.init(document.getElementById('buy_chart'));
+
+
+			//common 横柱状图
+			function rendchart1(chartId, datax, datay, barColor) {
+				var myChart = echarts.init(document.getElementById(chartId));
+
+				var	option = {
+			            tooltip : {
+			                trigger: 'axis',
+			                axisPointer: {
+					        	lineStyle: {
+					        		color: '#000',
+					        		type:'dashed'
+					        	}
+					        },
+					        textStyle : {
+					        	color:'#fff',
+								fontSize:20,
+							}
+			            },
+			            calculable : false,      
+			            grid: { 
+			            	x : 160,   //左边距离
+							y : 60,    //上距离
+							x2 : 80,  //右边距离
+							y2 : 30   //底部高低
+			            },
+			            xAxis : [
+			                {
+			                    type : 'value',
+			                    axisTick: {show: false},
+		            			axisLine: {show: false},
+		            			axisLabel: {
+		            				show: false
+		            			},   
+    							splitLine : { // 分隔线
+    			                	show : true,
+    			           			splitNumber:5,
+    								lineStyle : { 
+    									color : [ '#F3F1F4' ]
+    								}
+    							},
+			                }
+			            ],
+			            yAxis : [
+			                {
+			                    type : 'category',
+			                    axisLine: {show: false},
+			                    axisTick: {show: false},
+			                    axisLabel: {
+				                    interval: 0,
+				                    textStyle: {
+				                     	show: true,
+				                     	color: '#444444',
+				                     	fontSize:20,
+					                    fontWeight:"500", 
+				                     },
+				                    
+			                 },
+			                    data : datay,
+			                }
+			            ],
+			            series : [
+			                {
+			                    type:'bar',
+			                    barWidth:40,
+			                    itemStyle: {
+			                        normal: {
+			                            color: barColor,
+			                            label: {
+			                               show:true,
+			                               position:'right',
+			                            //   offset: [5, 5],
+			                               textStyle:{
+			                              	 color: '#444444',
+			                                 fontSize:20
+			                              }
+			                             }
+			                        }
+			                    },
+			                    data : datax
+			                }
+			            ]
+		        };
+				myChart.setOption(option);	
+			}
+
+
+
+			//common 竖柱状图
+			function rendchart2(chartId, titleName, datax, datay) {
+				var myChart = echarts.init(document.getElementById(chartId));
+
+				var	option = {
+					title: {
+					       text: titleName,
+					       x:'center',
+					       y:'top',
+					       textStyle: {
+			                  fontSize: 35,
+			                  fontWeight: '500',
+			                  color: '#444'          
+			              },
+					      
+					   },
+				    tooltip : {
+				        trigger: 'axis',
+				        axisPointer : {           
+				            type : 'line'        
+				        },
+				        textStyle : {
+				        	color:'#fff',
+							fontSize:20,
+						}
+				    },
+				    grid: {
+				        x : '4%',   //左边距离
+				        y : 100,    //上距离
+				        x2 : '4%',  //右边距离
+				        y2 : '22%',   //底部高低
+				        containLabel: true
+				    },
+				    xAxis : [
+				        {
+				            type : 'category',
+				            data : datax,
+				            axisLine: {show: false},
+				            axisTick: {show: false},
+				            
+				            axisLabel: {
+				            	interval: 0,
+				         	  //  rotate:50,        //倾斜度 -90 至 90 默认为0  
+				                margin:15,
+        	                    textStyle: {
+        	                     	show: true,
+        	                     	color: '#444444',
+        	                     	fontSize:20,
+        		                    fontWeight:"500", 
+        	                     },
+
+
+				            },
+				           
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'value',
+				            axisLine: {show: false},
+				            axisTick: {show: false},
+				            axisLabel: {
+	            				show: false
+	            			},   
+							splitLine : { // 分隔线
+			                	show : true,
+			           			splitNumber:5,
+								lineStyle : { 
+									color : [ '#F3F1F4' ]
+								}
+							},
+
+				        }
+				    ],
+				    series : [
+				        {
+				            type:'bar',
+				            barWidth: '40%',
+				            data:datay,
+				            itemStyle:{//柱状图颜色从左向右渐变
+				            	normal:{
+				            		color: function(params) {
+				            				var colorList = ['#8fdefc','#81d2f9','#71c6f2','#5db4e9','#4ca7e4','#429ee1'];
+				            				return colorList[params.dataIndex]
+				            		},
+					            	label: {
+					            	   show:true,
+					            	   position:'top',
+					            	//   offset: [0, 10],
+					            	   textStyle:{
+					            	  	 color: '#444444',
+					            	     fontSize:20
+					            	    }
+					            	 }
+				            	}
+				            }
+				        }
+				    ]
+				};
+					myChart.setOption(option);	
+			}
+
+
+			//购买排序
+			functionMap.chartBuy = function(){
+				option = {
+					color:['#82DAFD','#6DC9F6','#4EB1EC','#379FE5','#358fd0'],
+					title: {
+					       text: '品牌漏斗 - 雪佛兰XL',
+					       x:'center',
+					       y:20,
+					       textStyle: {
+			                  fontSize: 35,
+			                  fontWeight: '500',
+			                  color: '#444'          // 主标题文字颜色
+			              },
+					      
+					   },
+				    tooltip : {
+				        trigger: 'axis',
+				        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+				            lineStyle: {
+					        		color: '#000',
+					        		type:'dashed'
+					        	}
+				        },
+				        textStyle : {
+				        	color:'#fff',
+							fontSize:20,
+						}
+				    },
+				    legend: {
+					    top : 110,
+						position : 'center',
+					       data : [ {
+								name : "产品",
+								icon: 'rect',
+								textStyle : {
+									fontSize:20,
+								}
+							},
+							{
+								name : "+品牌",
+								icon: 'rect',
+								textStyle : {
+									fontSize:20,
+								}
+							},
+							{
+								name : "+配置",
+								icon: 'rect',
+								textStyle : {
+									fontSize:20,
+								}
+							},
+							{
+								name : "+MSRP",
+								icon: 'rect',
+								textStyle : {
+									fontSize:20,
+								}
+							},
+							{
+								name : "+top",
+								icon: 'rect',
+								textStyle : {
+									fontSize:20,
+								}
+							}]
+				    },
+				    grid: {
+				     	x : 170,   //左边距离
+						y : 200,    //上距离
+						x2 : 30,  //右边距离
+						y2 : 30   //底部高低
+					 },
+				    xAxis : [
+				        {
+				            type : 'value',
+				            axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: false
+	            			},
+	            			splitLine : { // 分隔线
+			                	show : true,
+			           			splitNumber:5,
+								lineStyle : { 
+									color : [ '#F3F1F4' ]
+								}
+							},
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'category',
+	            			axisTick: {show: false},
+	            			axisLine: {show: false},
+	            			axisLabel: {
+	            				show: true,
+	            				textStyle: {
+	            					fontSize: '20',
+	            					fontWeight:"500",  
+	                                color:"#444" ,
+	            			   }
+	            			},
+				            data : ['雪佛兰迈锐宝XL','福特蒙迪欧','本田雅阁','现代索纳塔','别克君威','日产天籁']
+				        }
+				    ],
+				    series : [
+				        {
+				            name:'产品',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false,
+				                    position: 'inside'
+				                }
+				            },
+				            data:[ 8, 11, 59, 95, 32, 49]
+				        },
+				        {
+				            name:'+品牌',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false
+				                }
+				            },
+				            data:[6, 8, 58, 93, 28, 46]
+				        },
+				        {
+				            name:'+配置',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false
+				                }
+				            },
+				            data:[ 5, 8, 61, 93, 32, 50]
+				        },
+				        {
+				            name:'+MSRP',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false,
+				                    position: 'left'
+				                }
+				            },
+				            data:[ 5, 8, 61, 94,32, 50]
+				        },
+				        {
+				            name:'+TP',
+				            type:'bar',
+				            label: {
+				                normal: {
+				                    show: false,
+				                    position: 'left'
+				                }
+				            },
+				            data:[ 5, 8, 61, 94,32, 50]
+				        }
+				    ]
+				};
+				myChart_buy.setOption(option);	
+			}
+
+
+			//common reason chart 
+			function rendchart3(chartId, titleName, datax, datay) {
+				var myChart = echarts.init(document.getElementById(chartId));
+
+				var	option = {
+					title: {
+					       text: titleName,
+					       x:'center',
+					       y:'top',
+					       textStyle: {
+			                  fontSize: 35,
+			                  fontWeight: '500',
+			                  color: '#444'          // 主标题文字颜色
+			              },
+					   },
+				    tooltip : {
+				        trigger: 'axis',
+				        axisPointer : {           
+				            type : 'line'        
+				        },
+				        textStyle : {
+				        	color:'#fff',
+							fontSize:20,
+						}
+				    },
+				    grid: {
+				        x : '4%',   //左边距离
+				        y : 100,    //上距离
+				        x2 : '4%',  //右边距离
+				        y2 : '16%',   //底部高低
+				        containLabel: true
+				    },
+				    xAxis : [
+				        {
+				            type : 'category',
+				            data : datax,
+				            axisLine: {show: false},
+				            axisTick: {show: false},
+				            axisLabel: {
+				            	interval: 0,
+				            //	rotate:50,        //倾斜度 -90 至 90 默认为0  
+				                margin:15,
+        	                    textStyle: {
+        	                     	show: true,
+        	                     	color: '#444444',
+        	                     	fontSize:20,
+        	                     	margnLeft: 40,
+        		                    fontWeight:"500", 
+        	                     },
+				            }
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'value',
+				            axisLine: {show: false},
+				            axisTick: {show: false},
+				            axisLabel: {
+	            				show: false
+	            			}, 
+							splitLine : { // 分隔线
+			                	show : true,
+			           			splitNumber:5,
+								lineStyle : { 
+									color : [ '#F3F1F4' ]
+								}
+							},  
+
+				        }
+				    ],
+				    series : [
+				        {
+				            type:'bar',
+				            barWidth: '40%',
+				            data:datay,
+				            itemStyle:{//柱状图颜色从左向右渐变
+				            	normal:{
+				            		color: function(params) {
+				            				var colorList = ['#8fdefc','#81d2f9','#71c6f2','#5db4e9','#4ca7e4','#429ee1'];
+				            				return colorList[params.dataIndex]
+				            		},
+					            	label: {
+					            	   show:true,
+					            	   position:'top',
+					            	 //   offset: [0, 10],
+					            	   textStyle:{
+					            	  	 color: '#444444',
+					            	     fontSize:20
+					            	    }
+					            	 }
+				            	}
+				            }
+				        }
+				    ]
+				};
+					myChart.setOption(option);	
+			}
+
+
+
+		//评价 chart
+		function rendEvalChart(chartId, titleName) {
+			var myChart = echarts.init(document.getElementById(chartId));
+
+			option = {
+			    color:['#c4cfe3','#a2c0da','#8ea7c7','#6797d1','#637fa4','#add3c6','#8eceb7','#99c1a3','#7ca385','#6e937c'],
+			    tooltip: {
+			        trigger: 'axis',
+			        axisPointer: { // 坐标轴指示器，坐标轴触发有效
+			            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+			        },
+			        padding: 20,
+			        textStyle : {
+				        	color:'#fff',
+							fontSize:20,
+						}
+			    },
+	    		title: {
+	    		       text: titleName,
+	    		       subtext: "Pre DSI           Pre VPI       Vehicle Confirmation    Clinic",
+	    		       x:'center',
+	    		       y:'top',
+	    		       top: '3%',
+	    		       textStyle: {
+	                      fontSize: 35,
+	                      fontWeight: '500',
+	                      color: '#444'          // 主标题文字颜色
+	                  },
+	                  subtextStyle: {           // 副标题文字
+	                     color: '#444',
+	                     fontSize: 23,
+	                  },
+	                  itemGap: 120            //主副标题之间的间距(10)
+	    		   },
+			    legend: {
+			        top: '13%',
+			      	position : 'center',
+			      	itemGap:10,
+			      	itemWidth: 25,
+			      	itemHeight: 25,
+			      	icon: 'rect',
+			      	orient : 'vertical',
+			        data: [
+			        	{
+							name : "测试车型1",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "竞品1",
+							textStyle : {
+								fontSize:20
+							}
+						},
+						{name:""},
+						{
+							name : "测试车型2",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "竞品2",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{name:""},
+						{
+							name : "测试车型3",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "竞品3",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{name:""},
+						{
+							name : "测试车型4",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "竞品4",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{name:""},
+						{
+							name : "测试车型5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+						{
+							name : "竞品5",
+							textStyle : {
+								fontSize:20,
+							}
+						},
+
+			        ]
+			       
+			    },
+			    grid: {
+			        left: '1%',
+			        right: '4%',
+			        bottom: '3%',
+			        top: '35%',
+			        containLabel: true
+			    },
+			    xAxis: [{
+			        type: 'category',
+			        axisTick: {show: false},
+					axisLine: {show: false},
+			        data: ['index', 'index', 'index', 'index'],
+		            axisLabel: {
+		            	interval: 0,
+		                margin:15,
+	                    textStyle: {
+	                     	show: true,
+	                     	color: '#444444',
+	                     	fontSize:20,
+	                     	margnLeft: 40,
+		                    fontWeight:"500", 
+	                     },
+		            }
+			    }],
+			    yAxis: [{
+			        type: 'value',
+			        axisTick: {show: false},
+					axisLine: {show: false},
+					axisLabel: {
+						show: false
+					},
+					splitLine : { // 分隔线
+	                	show : true,
+	           			splitNumber:5,
+						lineStyle : { 
+							color : [ '#F3F1F4' ]
+						}
+					}, 
+			       
+			    }],
+			    series: [{
+			        name: '测试车型1',
+			        type: 'bar',
+			        data: [20, 12, 23, 24]
+			    }, {
+			        name: '测试车型2',
+			        type: 'bar',
+			        data: [10, 20, 5, 9]
+			    }, {
+			        name: '测试车型3',
+			        type: 'bar',
+			        data: [5, 6, 9, 8]
+			    }, {
+			        name: '测试车型4',
+			        type: 'bar',
+			        data: [11, 20, 13, 11]
+			    },{
+			        name: '竞品1',
+			        type: 'bar',
+			        data: [10, 12, 11, 14]
+			    }, {
+			        name: '竞品2',
+			        type: 'bar',
+			        data: [10, 20, 5, 9]
+			    }, {
+			        name: '竞品3',
+			        type: 'bar',
+			        data: [4, 6, 3, 9]
+			    }, {
+			        name: '竞品4',
+			        type: 'bar',
+			        data: [7, 12, 20, 11]
+			    }]
+			};
+			myChart.setOption(option);	
+		}
+
+	</script>
+</body>
+</html>
